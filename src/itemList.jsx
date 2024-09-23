@@ -9,8 +9,10 @@ export function Item({ id, name, description, price, image }) {
   const dispatch = useDispatch();
 
   const handleAddToCart = () => {
+    console.log({ id, name, description, price, image });
+
     setCount(count + 1);
-    dispatch(addToCart({ name, description, price, image }));
+    dispatch(addToCart({ id, name, description, price, image }));
   };
 
   return (

@@ -1,3 +1,4 @@
+// src/actions/cartActions.jsx
 export const ADD_TO_CART = "ADD_TO_CART";
 export const REMOVE_FROM_CART = "REMOVE_FROM_CART";
 
@@ -6,7 +7,7 @@ export const addToCart = (item) => ({
   payload: item,
 });
 
-export const removeFromCart = (itemId) => ({
+export const removeFromCart = (name) => ({
   type: REMOVE_FROM_CART,
-  payload: itemId,
+  payload: { name },
 });
